@@ -9,7 +9,7 @@
 
 module.exports = (robot) ->
   robot.respond /PING$/i, (msg) ->
-    msg.send "PONG"
+    msg.send "PONG-PONG"
 
   robot.respond /ADAPTER$/i, (msg) ->
     msg.send robot.adapterName
@@ -24,3 +24,5 @@ module.exports = (robot) ->
     msg.send "Goodbye, cruel world."
     process.exit 0
 
+  robot.respond /ka-san$/i, (msg) ->
+    msg.send "J( 'ｰ`)し#{msg.message.user.name} 元気かい？かあさんも元気です"
